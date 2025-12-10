@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --bg-one: #ffffff;
+  --primary-color: #fd955e;
+  --secondary-color: #001d38;
+  --text-color: #10172a;
+  --bg-two: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-one: #ffffff;
+    --primary-color: #fd955e;
+    --secondary-color: #001d38;
+    --text-color: #10172a;
+    --bg-two: #f5f5f5;
+  }
+}
+
+body {
+  background: var(--bg-one);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Small circular Swiper arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 12px;
+  width: 25px;       /* button size */
+  height: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SVG icon inside arrow */
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 12px;    /* icon size */
+  height: 12px;
+  color: white;   /* icon color */
+}
+
+/* Hover effect */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: var(--primary-color);
+}
